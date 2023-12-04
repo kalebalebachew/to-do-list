@@ -13,9 +13,9 @@ mongoose.connect('mongodb+srv://kalebalebachew4:0913029062@cluster0.rpzteas.mong
 
 app.set('view engine', 'ejs');
 
-const { swaggerUi, specs } = require('./swagger'); // Update the path accordingly
+const { swaggerUi, specs } = require('./swagger'); 
 
-// ...
+
 
 // Swagger documentation
 app.use('/swagger', swaggerUi.serve);
