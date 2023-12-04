@@ -18,9 +18,9 @@ mongoose.connect(process.env.MONGO_URI, { // Use the MONGO_URI environment varia
 
 app.set('view engine', 'ejs');
 
-const { swaggerUi, specs } = require('./swagger'); // Update the path accordingly
+const { swaggerUi, specs } = require('./swagger'); 
 
-// ...
+
 
 // Swagger documentation
 app.use('/swagger', swaggerUi.serve);
