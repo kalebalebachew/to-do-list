@@ -1,12 +1,17 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const table = require('./models/table');
+const dotenv = require('dotenv')
+
+
+dotenv.config();
+
 const app = express();
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 
-mongoose.connect('mongodb+srv://kalebalebachew4:0913029062@cluster0.rpzteas.mongodb.net/?authMechanism=SCRAM-SHA-1', {
+mongoose.connect(process.env.MONGO_URI, { // Use the MONGO_URI environment variable
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
